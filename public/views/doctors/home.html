@@ -1,0 +1,1306 @@
+
+<script>
+    $(function() {
+        $('.nav-tabsH a').on('click', function(e) {
+            e.preventDefault();
+            $(this).tab('show');
+        });
+    });
+
+    $(function() {
+        $('.navbar-toggle1 collapsed').on('click', function(e) {
+            $(this).tab('show');
+        });
+    });
+
+    $(function() {
+        $('.navbar-nav .open .dropdown-menu').on('click', function(e) {
+            $(this).tab('hide');
+        });
+    });
+</script>
+<script>
+    window.onload = function() {
+        document.getElementById("#area").onchange = function() {
+            document.getElementsByName("categoryselect")[0].focus();
+        }
+    }
+</script>
+
+
+			<div class="kw-hidden-search-box" data-animate-in="slideInDown" data-animate-out="slideOutUp" id="search-box">
+
+				<div class="container">
+
+					<!-- - - - - - - - - - - - - - Search Form - - - - - - - - - - - - - - - - -->
+
+					<form action="#" class="searchform" id="searchform" method="get" role="search">
+
+						<div>
+
+							<input type="text" id="s" name="s" value="" placeholder="Looking for...">
+							<button type="submit" id="searchsubmit"><span class="lnr icon-magnifier"></span></button>
+
+						</div>
+
+					</form>
+
+					<!-- - - - - - - - - - - - - - End of Search Form - - - - - - - - - - - - - - - - -->
+
+				</div><!--/ .container -->
+				
+			</div>
+
+			<!-- - - - - - - - - - - - - - End of Search Box (hidden) - - - - - - - - - - - - - - - - -->
+
+			<!-- - - - - - - - - - - - - - Header - - - - - - - - - - - - - - - - -->
+
+			<header id="header" class="kw-header kw-dark kw-transparent" style="z-index:119 !important">
+
+				<!-- - - - - - - - - - - - - - Header Top Bar - - - - - - - - - - - - - - - - -->
+
+				<div class="kw-top-bar">
+
+					<ul class="kw-hr-list">
+
+						<li>
+							
+							<div class="kw-current-location">
+
+								<span class="lnr icon-map-marker"></span> location: <b>India</b>
+
+							</div><!--/ .kw-current-location -->
+
+						</li>
+
+						<li>
+
+							<ul class="kw-social-links">
+
+								<li><a href="https://www.facebook.com/nxsearch" target="_blank"><i class="fa fa-facebook"></i></a></li>
+								<li><a href=""><i class="fa fa-google-plus" target="_blank"></i></a></li>
+								<li><a href="https://twitter.com/nxsearch" target="_blank"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="https://www.instagram.com/nxsearch_com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+								<!--<li><a href="#"><i class="fa fa-envelope-o"></i></a></li>-->
+
+							</ul>
+
+						</li>
+
+					</ul><!--/ .kw-hr-list -->
+
+					<!--<ul class="kw-hr-list">
+
+						<li><a href="#" class="kw-login" data-modal="modals/login.html"><span class="lnr icon-lock"></span> Login</a></li>
+
+						<li>
+							
+							<div class="kw-dropdown kw-language-options">
+
+								<span class="kw-dropdown-invoker"><img src="images/flag_en.jpg" alt=""> English</span>
+
+							</div>
+
+						</li>
+
+					</ul> .kw-hr-list -->
+
+				</div>
+
+				<!-- - - - - - - - - - - - - - End of Header Top Bar - - - - - - - - - - - - - - - - -->
+
+				<!-- - - - - - - - - - - - - - Header Section - - - - - - - - - - - - - - - - -->
+
+				<div class="kw-hsection kw-sticky">
+
+					<div class="kw-sm-table-row row">
+
+						<div class="col-sm-2 col-md-3">
+
+							<!-- - - - - - - - - - - - - - Logo - - - - - - - - - - - - - - - - -->
+
+							<a href="/">
+
+								<img src="assets/img/NX-LOGO-300x66.png" alt="nxsearch.com">
+
+							</a>
+
+							<!-- - - - - - - - - - - - - - End of Logo - - - - - - - - - - - - - - - - -->
+
+						</div>
+
+						<div class="col-sm-10 col-md-9">
+
+							<div class="kw-hcontent">
+
+								<!-- - - - - - - - - - - - - - Navigation - - - - - - - - - - - - - - - - -->
+
+								<nav class="kw-nav-wrap">
+
+									<ul class="kw-navigation" style="text-align: center;">
+
+										<li class="kw-current">
+
+											<a href="/">Home</a>
+
+										</li>
+
+										<li class="menupad">
+
+											<a href="/aboutus">About</a>
+										</li>
+
+											<!-- - - - - - - - - - - - - - End of Submenu (level 2) - - - - - - - - - - - - - - - - -->
+
+									</ul>
+
+								</nav>
+
+								<!-- - - - - - - - - - - - - - End of Navigation - - - - - - - - - - - - - - - - -->
+
+								<!-- - - - - - - - - - - - - - Search Form - - - - - - - - - - - - - - - - -->
+
+							
+
+								<!-- - - - - - - - - - - - - - End of Search Form - - - - - - - - - - - - - - - - -->
+
+								<!-- - - - - - - - - - - - - - Add Listing - - - - - - - - - - - - - - - - -->
+
+								<a href="/register" class="kw-btn-medium kw-yellow-type-2">Add Listing</a>
+
+								<!-- - - - - - - - - - - - - - End of Add Listing - - - - - - - - - - - - - - - - -->
+
+							</div><!--/ .kw-hcontent -->
+
+						</div>
+
+					</div><!--/ .kw-sm-table-row.row -->
+
+				</div>
+
+				<!-- - - - - - - - - - - - - - End of Header Section - - - - - - - - - - - - - - - - -->
+
+			</header>
+
+			<!-- - - - - - - - - - - - - - End of Header - - - - - - - - - - - - - - - - -->
+
+			<!-- - - - - - - - - - - - - - Page Header - - - - - - - - - - - - - - - - -->
+
+			<div class="kw-page-header kw-dark kw-transparent kw-type-7">
+
+				<div class="kw-page-header-content">
+
+					<div class="container">
+
+						<h1 class="kw-page-title align-center">Find Your Requirement...!</h2>
+						
+							
+
+						
+							
+						
+						<!-- - - - - - - - - - - - - - Oneline Form - - - - - - - - - - - - - - - - -->
+
+											<form class="kw-oneline-form" ng-controller="InstantSearchController">
+
+												<ul>
+
+													<li class="kw-oneline-row-action">
+
+														<fieldset class="kw-oneline-fields">
+															
+															<div class="row">
+
+																
+
+																<div class="col-sm-4">
+
+																	<div class="kw-custom-select">
+
+																		<select class="form-control" select2="" name="city" data-ng-model="client.selectedCityModel" ng-options="c.city as c.city for c in client.cities" ng-disabled="true">
+																				<option value=""><i class="fa fa-map-marker" aria-hidden="true"></i> Select City</option>
+																		</select>
+
+																	</div><!--/ .kw-custom-select -->
+
+																</div>
+
+																<div class="col-sm-4">
+
+																	<div class="kw-custom-select">
+
+																		<select id="area" onchange="document.getElementsByName('categoryselect')[0].focus()" class="form-control" select2="" name="area" data-ng-model="MainAreas.selectedAreaModel.Area" ng-options="c.Area as c.Area for c in MainAreas.areas | orderBy : 'Area' "
+													ng-disabled="disabled" required>
+																	<option ng-selected="selectedArea" value="">Select Area</option>
+																</select>
+
+																	</div><!--/ .kw-custom-select -->
+
+																</div>
+
+																<div class="col-sm-4">
+																	
+																	<input type="text" value="{{selectedCategory}}" name="categoryselect" class="form-control showdiv" id="exampleInputPassword2" placeholder="Start Typing..." ng-model="searchString" ng-change="callScriptThenServer(searchString)" ng-focus="loadDefaultCategories()" ng-click="EnableData=true" ng-keypress="EnableData=true" ng-keydown="loadCategories()" ng-keyup="loadClients()" click-anywhere-but-here="EnableData=false" autocomplete="off" />
+																	
+
+												<div ng-show="EnableTextInputResult == false || EnableData" class="scrollable-menu" style="color:black !important; background-color: #fff; z-index: 2;border: 1px solid grey;position: absolute;padding-left:2px; width: 96%;height:400px;">
+													<div ng-repeat="i in Categories |  filter : searchString track by $index">
+														<a href="" ng-click="gotoResultsPageByCategory(i)">
+															<div class="list_dropdown">
+																{{i}}
+															</div>
+														</a>
+													</div>
+													<div ng-repeat="i in SubCategories |  filter : searchString track by $index">
+														<a href="" ng-click="gotoResultsPageBySubCategory(i)">
+															<div class="list_dropdown" >
+																{{i}}
+															</div>
+														</a>
+
+
+													</div>
+
+													<div ng-repeat="i in clients |filter : {isPaidClient:true}  |  filter : searchString track by $index " ng-click="doSomething($event, 1)">
+														<a href="/profile/{{i.City | slugify}}/{{i.Categories | slugifynolower}}/{{i.Area | slugify}}/{{i.ClinicName | slugify | slug}}/{{i._id}}">
+															<div class="list_dropdown">
+																<b> {{i.ClinicName}}</b>
+																<br/>
+															</div>
+														</a>
+													</div>
+												</div>
+
+
+											</div>
+
+										</div>
+
+									</fieldset>
+
+									<div class="kw-oneline-action">
+
+										<button class="kw-btn-big kw-yellow" type="submit">Search</button>
+
+									</div>
+
+								</li>
+
+							</ul>
+
+						</form>
+
+						<!-- - - - - - - - - - - - - - End of Oneline Form - - - - - - - - - - - - - - - - -->
+
+					</div><!--/ .container -->
+
+				</div><!--/ .kw-page-header-content -->
+
+				<div class="kw-page-header-media headbg1" ></div><!--/ .kw-page-header-media -->
+
+			</div>
+
+			<!-- - - - - - - - - - - - - - End of Page Header - - - - - - - - - - - - - - - - -->
+				
+	<div class="container" style="padding-top: 25px; background-color:white;">
+		<div class="col-md-12 col-xs-12 TitleHome" style="padding-bottom: 25px;">
+				<h2>Popular Categories</h2>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+					<div class="col-md-3 col-sm-4 col-xs-6"><a href="/Pune/Dentist/Dentist-in-Pune">
+						<div class="row toDiv text-center"> 
+							<img src="/assets/img/dentist-nxsearch.jpg">
+						</div>
+						<div class="grid-title">
+							<div style="position:inline; text-align:center;">
+								<h3>Dentists</h3>
+							</div>	
+						</div>
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-6"><a href="/Pune/Ayurvedic-Clinics/Ayurvedic-Clinics-in-Pune">
+						<div class="row toDiv text-center"> 
+							<img src="/assets/img/ayurveda-nxsearch.jpg">
+						</div>
+						<div class="grid-title">
+							<div style="position:inline; text-align:center;">
+								<h3>Ayurvedic Clinics</h3>
+							</div>	
+						</div>
+						</a>
+					</div>
+				<div class="col-md-3 col-sm-4 col-xs-6"><a href="/Pune/Preschools/Preschools-in-Pune">
+					<div class="row toDiv text-center"> 
+						<img src="/assets/img/Preschool-nxsearch.jpg">
+					</div>
+					<div class="grid-title">
+						<div style="position:inline; text-align:center;">
+							<h3>Preschool</h3>
+						</div>	
+					</div>
+					</a>
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-6"><a href="/Pune/Salon-and-Spa/Salon-and-Spa-in-Pune">
+					<div class="row toDiv text-center"> 
+						<img src="/assets/img/salon-spa-nxsearch.jpg">
+					</div>
+					<div class="grid-title">
+						<div style="position:inline; text-align:center;">
+							<h3>Salon & Spa</h3>
+						</div>	
+					</div>
+					</a>
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-6"><a href="/Pune/Fitness-Centres/Fitness-Centres-in-Pune">
+					<div class="row toDiv text-center"> 
+						<img src="/assets/img/fitness-gym-centres-nxsearch.jpg">
+					</div>
+					<div class="grid-title">
+						<div style="position:inline; text-align:center;">
+							<h3>Gym & Fitness</h3>
+						</div>	
+					</div>
+					</a>
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-6"><a href="/Pune/Yoga-Classes/Yoga-Classes-in-Pune">
+					<div class="row toDiv text-center"> 
+						<img src="/assets/img/yoga-classes-nxsearch.jpg">
+					</div>
+					<div class="grid-title">
+						<div style="position:inline; text-align:center;">
+							<h3>Yoga Classes</h3>
+						</div>	
+					</div>
+					</a>
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-6"><a href="/Pune/Music-Classes/Music-Classes-in-Pune">
+					<div class="row toDiv text-center"> 
+						<img src="/assets/img/music-classes-nxsearch.jpg">
+					</div>
+					<div class="grid-title">
+						<div style="position:inline; text-align:center;">
+							<h3>Music Classes</h3>
+						</div>	
+					</div>
+					</a>
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-6"><a href="/Pune/Language-Classes/Language-Classes-in-Pune">
+					<div class="row toDiv text-center"> 
+						<img src="/assets/img/language-classes-nxsearch.jpg">
+					</div>
+					<div class="grid-title">
+						<div style="position:inline; text-align:center;">
+							<h3>Language Classes</h3>
+						</div>	
+					</div>
+					</a>
+				</div>
+				
+			</div>
+		</div>				
+
+        
+
+       <!-- <div id="navbar" class="navbar-collapse">
+            <ul class="nav nav-tabsH nav-justified" id="myTab">
+                <li class="active toDiv"><a href="#health" data-toggle="tab">
+				<div class="col-xs-12 text-center"> 
+					<img src="/assets/img/icon-04.png" style="width:40px;height:40px;">
+				</div>
+				<span style="vertical-align: -webkit-baseline-middle;">
+					Health & Medicine
+				</span>
+				</a></li>
+                <li class="toDiv"><a href="#school" data-toggle="tab" aria-expanded="false">
+				<div class="col-xs-12 text-center"> 
+					<img src="/assets/img/icon-05.png" style="width:40px;height:40px;">
+				</div>
+				<span style="vertical-align: -webkit-baseline-middle;">
+					Education
+				</span>
+				</a></li>
+                <li class="toDiv"><a href="#beauty" data-toggle="tab" aria-expanded="false">
+				<div class="col-xs-12 text-center"> 
+					<img src="/assets/img/icon-27.png" style="width:40px;height:40px;">
+				</div>
+				<span style="vertical-align: -webkit-baseline-middle;">
+					Beauty Care
+				</span>
+				</a></li>
+                <li class="toDiv"><a href="#sports" data-toggle="tab" aria-expanded="false">
+				<div class="col-xs-12 text-center"> 
+					<img src="/assets/img/gym.png" style="width:40px;height:40px;">
+				</div>
+				<span style="vertical-align: -webkit-baseline-middle;">
+					Gym & Academies
+				</span>
+				</a></li>
+                    <li class="toDiv"><a href="#travel" data-toggle="tab" aria-expanded="false">
+				<div class="col-xs-12 text-center">
+					<img src="/assets/img/icon-02.png" style="width:40px;height:40px;">
+				</div>
+				<span style="vertical-align: -webkit-baseline-middle;">
+					Travel & Transport
+				</span>
+				</a></li>
+                <li class="toDiv"><a href="#build" data-toggle="tab" aria-expanded="false">
+				<div class="col-xs-12 text-center"> 
+					<img src="/assets/img/icon-06.png" style="width:40px;height:40px;">
+				</div>
+				<span style="vertical-align: -webkit-baseline-middle;">
+					Professionals
+				</span>
+				</a></li>
+            </ul>
+        </div>-->
+        <!--/.nav-collapse -->
+
+        <!--/.container-fluid -->
+
+    </div>
+
+
+
+  <!--<div class="container tab-content" style="background-color:white;">-->
+       <!-- <div id="health" class="tab-pane active">
+            <br />
+
+            <div class="row row_top">
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+
+                    <div class="text-center" itemscope itemtype=https://schema.org/Dentist>
+                        <a itemprop="url" href="/Pune/Dentist/Dentist-in-Pune"> 
+							<span >
+								<img src="/assets/img/Dentist.png" width="50px" height="50px" class="subcat" alt="Dentist nx-search">
+							</span>
+						</a>
+                    </div>
+
+                    <div class="caption tabtitle">
+
+                         <a itemprop="url" href="/Pune/Dentist/Dentist-in-Pune"><h4>Dental Clinics</h4></a>
+                        
+                    </div>
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+
+                    <div itemscope itemtype=https://schema.org/Homeopathic class="thumbnail_home center-block">
+                        <a itemprop="url" href="#"><img src="assets/img/Homeopathy.png" width="50px" height="50px" class="subcat" alt="homeopathy nx-search"></a>
+                    </div>
+
+                    <div class="caption tabtitle" itemscope itemtype=https://schema.org/Homeopathic>
+                        <a itemprop="url" href="#">
+                            <h4>Homeopathy Clinics</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+
+                    <div class="thumbnail_home center-block" itemscope itemtype=https://health-lifesci.schema.org/Ayurvedic>
+                        <a href="/Pune/Ayurvedic-Clinics/Ayurvedic-Clinics-in-Pune"><img src="assets/img/Ayurveda.png" width="50px" height="50px" class="subcat" alt="Ayurveda nx-search"></a>
+                    </div>
+
+                    <div class="caption tabtitle">
+                        <a href="/Pune/Ayurvedic-Clinics/Ayurvedic-Clinics-in-Pune" itemscope itemtype=https://health-lifesci.schema.org/Ayurvedic>
+                            <h4>Ayurveda</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+
+                    <div class="thumbnail_home center-block" itemscope itemtype=https://schema.org/Physician>
+                        <a href="#"><img src="assets/img/Gynecologist.png" width="50px" height="50px" class="subcat" alt="Gynecologist nx-search"></a>
+                    </div>
+
+                    <div class="caption tabtitle" itemscope itemtype=https://schema.org/Physician>
+                        <a href="#">
+                            <h4>Gynecologist</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center" itemscope itemtype=https://schema.org/Dermatology>
+
+                    <div class="thumbnail_home center-block">
+                        <a href="#"><img src="assets/img/Dermatologist.png" width="50px" height="50px" class="subcat" alt="Dermatologist nx-search"></a>
+                    </div>
+
+                    <div class="caption tabtitle" itemscope itemtype=https://schema.org/Dermatology>
+                        <a href="#">
+                            <h4>Dermatologist</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+                    <div class="thumbnail_home img center-block" itemscope itemtype=https://health-lifesci.schema.org/Physiotherapist>
+                        <a href="#"><img src="assets/img/physiotherpist.png" width="50px" height="50px" class="subcat" alt="Physiotherapist Pune nx-search"></a>
+                    </div>
+
+                    <div class="caption tabtitle" itemscope itemtype=https://health-lifesci.schema.org/Physiotherapist>
+                        <a href="#">
+                            <h4>Physiotherapist</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div>
+                    <br />
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+                    <div class="thumbnail_home center-block" itemscope itemtype=https://schema.org/Physician>
+                        <a href="#"><img src="assets/img/ENT.png" width="50px" height="50px" class="subcat" alt="E-N-T specialist nx-search"></a>
+                    </div>
+
+                    <div class="caption tabtitle" itemscope itemtype=https://schema.org/Physician>
+                        <a href="#">
+                            <h4>E-N-T Specialist</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center" itemscope itemtype=https://schema.org/Physician>
+                    <div class="thumbnail_home center-block">
+                        <a href="#"><img src="assets/img/Urologist.png" width="50px" height="50px" class="subcat" alt="Urologist nx-search"></a>
+                    </div>
+
+                    <div class="caption tabtitle" itemscope itemtype=https://schema.org/Physician>
+                        <a href="#">
+                            <h4>Urologist</h4>
+                        </a>
+                    </div>
+                </div>
+ 
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+                    <div class="thumbnail_home center-block" itemscope itemtype=https://schema.org/Physician>
+                        <a href="#"><img src="assets/img/Opthalmologist.png" width="50px" height="50px" class="subcat" alt="Opthalmologist nx-search"></a>
+                    </div>
+
+                    <div class="caption tabtitle" itemscope itemtype=https://schema.org/Physician>
+                        <a href="#">
+                            <h4>Opthalmologist</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+                    <div class="thumbnail_home img center-block" itemscope itemtype=https://health-lifesci.schema.org/DiagnosticLab>
+                        <a href="#"><img src="assets/img/laboratory.png" width="50px" height="50px" class="subcat" alt="Diagnostic labs nx-search"></a>
+                    </div>
+
+                    <div class="caption tabtitle" itemscope itemtype=https://health-lifesci.schema.org/DiagnosticLab>
+                        <a href="#">
+                            <h4>Diagnostic labs</h4>
+                        </a>
+                    </div>
+                </div>
+
+
+
+                <div class="col-sm-1"></div>
+
+            </div>
+        </div> -->
+
+
+      <!--  <div id="school" class="tab-pane fade">
+
+            <br />
+
+            <div class="row ">
+                <div class="col-sm-1"></div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+
+                    <div class="thumbnail_home center-block" itemscope itemtype=https://schema.org/Preschool>
+                        <a itemprop="url" href="/Pune/Preschools/Preschools-in-Pune"><img src="assets/img/Preschool.png" width="50px" height="50px" class="subcat" alt="Preschools nx-search"></a>
+                    </div>
+
+                    <div class="caption tabtitle" itemscope itemtype=https://schema.org/Preschool>
+                        <a itemprop="url" href="/Pune/Preschools/Preschools-in-Pune">
+                            <h4>Preschools</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+
+                    <div class="thumbnail_home center-block" itemscope itemtype=https://schema.org/EducationalOrganization>
+                        <a href="#"><img src="assets/img/Institute.png" width="50px" height="50px" class="subcat" alt="Insitutes nx-search"></a>
+                    </div>
+
+                    <div class="caption tabtitle" itemscope itemtype=https://schema.org/EducationalOrganization>
+                        <a href="#">
+                            <h4>Institutes</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+
+                    <div class="thumbnail_home center-block" itemscope itemtype=https://schema.org/School>
+                        <a href="#"> <img src="assets/img/Interior.png" width="50px" height="50px" class="subcat" alt="Private Turions nx-search"></a>
+                    </div>
+
+                    <div class="caption tabtitle" itemscope itemtype=https://schema.org/School>
+                        <a href="#">
+                            <h4>Private Tuitions</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+                    <div class="thumbnail_home center-block" itemscope itemtype=https://schema.org/School>
+                        <a href="#"> <img src="assets/img/home-tutor.png" width="50px" height="50px" class="subcat" alt="Home Tutors in Pune nx-search"></a>
+                    </div>
+
+                    <div class="caption tabtitle" itemscope itemtype=https://schema.org/School>
+                        <a href="#">
+                            <h4>Home Tutors</h4>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-2 col-md-2 text-center">
+
+                </div>
+
+                <div class="col-sm-1"></div>
+            </div>
+        </div> -->
+
+
+       <!-- <div id="beauty" class="tab-pane fade">
+
+            <br />
+
+            <div class="row row_top">
+                <div class="col-sm-1"></div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+
+                    <div class="thumbnail_home center-block" itemscope itemtype=https://schema.org/DaySpa>
+                        <a href="/Pune/Salon-and-Spa/Salon-and-Spa-in-Pune"><img src="assets/img/Salon-Spa.png" width="50px" height="50px" class="subcat" alt="Salon & Spa nx-search"></a>
+                    </div>
+
+                    <div class="caption tabtitle" itemscope itemtype=https://schema.org/DaySpa>
+                        <a href="/Pune/Salon-and-Spa/Salon-and-Spa-in-Pune">
+                            <h4>Salon & Spa</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+                    <div class="thumbnail_home center-block" itemscope itemtype=https://schema.org/UnisexSalon>
+                        <a href="/Pune/Unisex-Salons//Unisex-Salons-in-Pune"><img src="assets/img/unisex-saloons.png" width="50px" height="50px" class="subcat" alt="Unisex solon in Pune nx-search"></a>
+                    </div>
+
+                    <div class="caption tabtitle" itemscope itemtype=https://schema.org/DaySpa>
+                        <a href="/Pune/Unisex-Salons/Unisex-Salons-in-Pune">
+                            <h4>Unisex Salon</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+
+                </div>
+
+                <div class="col-sm-1"></div>
+            </div>
+        </div> -->
+
+       <!-- <div id="sports" class="tab-pane fade">
+
+            <br />
+
+            <div class="row row_top">
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+                    <div class="thumbnail_home center-block">
+                        <a href="#"><img src="assets/img/Sports.png" width="50px" height="50px" class="subcat" alt="Sports nx-search"></a>
+                    </div>
+
+                    <div class="caption tabtitle">
+                        <a href="#">
+                            <h4>Sports</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+
+                    <div class="thumbnail_home center-block">
+                        <a href="#"><img src="assets/img/Dance-Academy.png" width="50px" height="50px" class="subcat" alt="Dance academy nx-search"></a>
+                    </div>
+
+                    <div class="caption tabtitle">
+                        <a href="#">
+                            <h4>Dance Academy</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+                    <div class="thumbnail_home center-block">
+                        <a href="#"><img src="assets/img/Musical-Academy.png" width="50px" height="50px" class="subcat" alt="Music academy nx-search"></a>
+                    </div>
+
+                    <div class="caption tabtitle">
+                        <a href="#">
+                            <h4>Music Academy</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+                    <div class="thumbnail_home center-block" itemscope itemtype=https://health-lifesci.schema.org/Gym-and-fitness>
+                        <a href="#"><img src="assets/img/Gym-Fitness.png" width="50px" height="50px" class="subcat" alt="Gym-and-fitness nx-search"></a>
+                    </div>
+                    <div class="caption tabtitle" itemscope itemtype=https://health-lifesci.schema.org/DiagnosticLab>
+                        <a href="#">
+                            <h4>Gym & Fitness</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+                    <div class="thumbnail_home center-block" itemscope itemtype=https://health-lifesci.schema.org/yoga-academy>
+                        <a href="#"><img src="assets/img/yoga.png" width="50px" height="50px" class="subcat" alt="Yoga-academy nx-search"></a>
+                    </div>
+                    <div class="caption tabtitle" itemscope itemtype=https://health-lifesci.schema.org/yoga-academy>
+                        <a href="#">
+                            <h4>Yoga Academy</h4>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+                    <div class="thumbnail_home center-block" itemscope itemtype=https://health-lifesci.schema.org/zumba-classes>
+                        <a href="#"><img src="assets/img/zumba-classes.png" width="50px" height="50px" class="subcat" alt="Zumba classes Pune nx-search"></a>
+                    </div>
+                    <div class="caption tabtitle" itemscope itemtype=https://health-lifesci.schema.org/yoga-academy>
+                        <a href="#">
+                            <h4>Zumba Classes</h4>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>-->
+
+         <!--<div id="travel" class="tab-pane fade">
+
+            <br />
+
+            <div class="row row_top">
+                <div class="col-sm-1"></div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6">
+
+                    <div class="thumbnail_home center-block">
+                        <a href="#"><img src="assets/img/Travel-Agent.png" width="50px" height="50px" class="subcat" alt="Travel Agents nx-search"></a>
+                    </div>
+
+                    <div class="caption tabtitle">
+                        <a href="#">
+                            <h4>Travel Agents</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+
+                    <div class="thumbnail_home center-block">
+                        <a href="#"><img src="assets/img/Movers-Packers.png" width="50px" height="50px" class="subcat" alt="Packers and Movers nx-search"></a>
+                    </div>
+
+                    <div class="caption tabtitle">
+                        <a href="#">
+                            <h4>Packers & Movers</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+
+                </div>
+
+                <div class="col-sm-1"></div>
+            </div>
+        </div>-->
+
+       <!-- <div id="build" class="tab-pane fade">
+
+            <br />
+
+            <div class="row row_top">
+                <div class="col-sm-1"></div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+
+                    <div class="thumbnail_home center-block">
+                        <a href="#"><img src="assets/img/Architect.png" width="50px" height="50px" class="subcat" alt="Architects nx-search"></a>
+                    </div>
+
+                    <div class="caption tabtitle">
+                        <a href="#">
+                            <h4>Architect</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+
+                    <div class="thumbnail_home center-block">
+                        <a href="#"><img src="assets/img/Landscape-Designier.png" width="50px" height="50px" class="subcat" alt="Landscape Designers nx-search"></a>
+                    </div>
+
+                    <div class="caption tabtitle">
+                        <a href="#">
+                            <h4>Landscape Designers</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+                    <div class="thumbnail_home center-block">
+                        <a href="#"><img src="assets/img/Interior.png" width="50px" height="50px" class="subcat" alt="Interior Designers nx-search"></a>
+                    </div>
+
+                    <div class="caption tabtitle">
+                        <a href="#">
+                            <h4>Interior Designers</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+                    <div class="thumbnail_home center-block">
+                        <a href="/Pune/Finance-and-Taxation-Service/Finance-and-Taxation-Service-in-Pune"><img src="assets/img/accuntant.jpg" width="50px" height="50px" class="subcat" alt="Finance and Taxation Service nx-search"></a>
+                    </div>
+
+                    <div class="caption tabtitle">
+                        <a href="/Pune/Finance-and-Taxation-Service/Finance-and-Taxation-Service-in-Pune">
+                            <h4>Finance & Taxation Service</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-xs-6 text-center">
+
+                </div>
+
+                <div class="col-sm-1"></div>
+            </div>
+        </div>-->
+
+
+
+    <!--</div> -->
+			<!-- - - - - - - - - - - - - - Page Content - - - - - - - - - - - - - - - - -->
+
+			<div class="kw-page-content">
+
+				<!--<div class="container hideShort" style="background-color:white;">
+
+					<!-- - - - - - - - - - - - - - Popular Categories - - - - - - - - - - - - - - - - -->
+								
+					
+					
+					<!-- - - - - - - - - - - - - - End of Popular Categories - - - - - - - - - - - - - - - - -->
+					
+					<!-- - - - - - - - - - - - - - Content Section - - - - - - - - - - - - - - - - -->
+						
+					<!--<div class="kw-section kw-large kw-fw" ng-controller="dashResultsController" >
+					  <div class="ng-hide">
+                		<h5 style="display: inline" itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/">Home</a></h5>&nbsp
+                		<i class="fa fa-angle-right" itemscope itemtype="http://data-vocabulary.org/Breadcrumb"></i>&nbsp
+               			 <h5 style="display: inline" itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><span id="city"></span></h5>
+               				 &nbsp<i class="fa fa-angle-right" itemscope itemtype="http://data-vocabulary.org/Breadcrumb"></i> &nbsp
+                		<h5 style="display: inline" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                    		<a id="categry" href=""> <span id="category"></span></a>
+                		</h5>&nbsp
+                			<i class="fa fa-angle-right" itemscope itemtype="http://data-vocabulary.org/Breadcrumb"></i>&nbsp
+               			 <h5 style="display: inline" itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><span id="area"></span>&nbsp</h5>
+               				 &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp
+               			 <h1 style="font-size: 14px; display: inline; "> <b>{{::aaa}}</b> matches found for: <b id="keyword"></b></h1>
+				  			<i id="shareBtn" title="Share on Facebook" class="fa fa-facebook-square fa-2x" style="color: #365899; cursor: pointer; padding-top: 10px;"></i>
+            		</div>
+						<div class="row">
+
+							<div class="col-sm-12" >
+
+								<h4 class="kw-section-title">Sponsored Listings</h4>
+													
+								<!--<h5 class="kw-section-subtitle">List of latest added places</h5>-->
+
+								<!-- - - - - - - - - - - - - - Listings Container - - - - - - - - - - - - - - - - 
+
+								<div class="kw-listings kw-type-1 col-sm-12" >
+
+							-- - - - - - - - - - - - - - Listing Item - - - - - - - - - - - - - - - - -
+
+									<div class="kw-listing-item-wrap hovereffect col-md-2 col-sm-4 col-xs-6" ng-repeat="item in results | limitTo:6 | filter: {isPaidClient : true} | filter : userSearch track by $index">
+
+										<article class="kw-listing-item" data-latitude="40.711437" data-longitude="-74.001378" data-marker="images/marker_1.png">
+
+											<!-- - - - - - - - - - - - - - Media - - - - - - - - - - - - - - - - 
+
+											<div class="kw-listing-item-media">
+
+												<a href="#" class="kw-listing-item-thumbnail">
+													<img src="{{::item.imageUrl}}" class="img-responsive" alt="">
+												</a>
+													
+											<div class="overlay">
+														<div class="text">
+
+															   <a href="/profile/{{item.City | slugify}}/{{item.Categories | slugifynolower}}/{{item.Area | slugify}}/{{item.ClinicName | slugify | slug}}/{{item._id}}" class="kw-btn-big1 kw-yellow"> View More </a>                                 
+
+														</div>
+													</div>
+											</div>
+
+											<!-- - - - - - - - - - - - - - End of Media - - - - - - - - - - - - - - - - -->
+
+											<!-- - - - - - - - - - - - - - Description - - - - - - - - - - - - - - - - 
+
+											<div class="kw-listing-item-info">
+
+												<header class="kw-listing-item-header">
+
+													<span class="kw-listing-item-title"><a href="/profile/{{item.City | slugify}}/{{item.Categories | slugifynolower}}/{{item.Area | slugify}}/{{item.ClinicName | slugify | slug}}/{{item._id}}"><b>{{item.ClinicName | limitTo: 17}} {{item.ClinicName.length > 17 ? '...' : ''}}</b></a></span>
+
+													<div class="kw-xs-table-row kw-xs-small-offset">
+
+														<div class="col-xs-6">
+
+															<div class="kw-listing-item-rating" > {{item.Categories}} </div>
+
+														</div>
+
+													</div>
+
+												</header>
+
+												<ul class="kw-listing-item-data kw-icons-list kw-oneline-form1">
+
+													<span class="lnr icon-map-marker"></span>{{::item.Area | limitTo : 13}}{{item.Area.length > 13 ? '...' : ''}}, {{::item.City}}
+													
+
+												</ul>
+
+												
+
+											</div>
+
+											<!-- - - - - - - - - - - - - - End of Description - - - - - - - - - - - - - - - - 
+
+										</article>
+
+									</div>
+
+									<!-- - - - - - - - - - - - - - End of Listing Item - - - - - - - - - - - - - - - - 
+
+								
+
+									<!-- - - - - - - - - - - - - - End of Listing Item - - - - - - - - - - - - - - - - 
+
+								</div>
+
+								<!-- - - - - - - - - - - - - - End of Listings Container - - - - - - - - - - - - - - - - 
+
+							</div>
+
+						</div><!--/ .row
+					
+					</div>-->
+				</div>					
+					<!-- - - - - - - - - - - - - - End of Content Section - - - - - - - - - - - - - - - - -->
+					
+					<!-- - - - - - - - - - - - - - Content Section - - - - - - - - - - - - - - - - -->
+									
+					<!-- - - - - - - - - - - - - - End of Content Section - - - - - - - - - - - - - - - - -->
+					
+					<!-- - - - - - - - - - - - - - Content Section - - - - - - - - - - - - - - - - -->
+
+			<section class="tg-main-section2 hideShort paralaxbag" ng-controller="dashResultsController">
+				  <div class="ng-hide">
+                		<h5 style="display: inline" itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/">Home</a></h5>&nbsp
+                		<i class="fa fa-angle-right" itemscope itemtype="http://data-vocabulary.org/Breadcrumb"></i>&nbsp
+               			 <h5 style="display: inline" itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><span id="city"></span></h5>
+               				 &nbsp<i class="fa fa-angle-right" itemscope itemtype="http://data-vocabulary.org/Breadcrumb"></i> &nbsp
+                		<h5 style="display: inline" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                    		<a id="categry" href=""> <span id="category"></span></a>
+                		</h5>&nbsp
+                			<i class="fa fa-angle-right" itemscope itemtype="http://data-vocabulary.org/Breadcrumb"></i>&nbsp
+               			 <h5 style="display: inline" itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><span id="area"></span>&nbsp</h5>
+               				 &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp
+               			 <h1 style="font-size: 14px; display: inline; "> <b>{{::aaa}}</b> matches found for: <b id="keyword"></b></h1>
+				  			<i id="shareBtn" title="Share on Facebook" class="fa fa-facebook-square fa-2x" style="color: #365899; cursor: pointer; padding-top: 10px;"></i>
+            		</div>
+				<div class="whitegb">
+					<div class="container" >
+						<div class="row">
+							<div class="col-sm-12 col-xs-12">
+								<div class="tg-statisticscounters">
+									<div class="row">
+										<div class="col-xs-4 text-center">
+											
+											<h1>36012</h1>
+											<h3>Happy Customers</h3>
+										</div>
+										<div class="col-xs-4 text-center">
+											
+											<h1>{{aaa}}</h1>
+											<h3>Total Listings </h3>
+										</div>
+										<div class="col-xs-4 text-center">
+											
+											<h1>{{catcount}}</h1>
+											<h3>No of Categories</h3>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</section>
+					
+					<!-- - - - - - - - - - - - - - End of Content Section - - - - - - - - - - - - - - - - -->
+					
+					<!-- - - - - - - - - - - - - - Content Section - - - - - - - - - - - - - - - - -->
+					
+					<!--
+						Removed Containt like reviews bologs and Testimonals -->
+
+			<!-- - - - - - - - - - - - - - End of Page Content - - - - - - - - - - - - - - - - -->
+
+
+<!-- Footer -->
+	<!-- - - - - - - - - - - - - - Footer - - - - - - - - - - - - - - - - -->
+
+			<footer id="footer" class="kw-footer" data-bg="images/section_bg_01.png">
+
+				<!-- - - - - - - - - - - - - - Newsletter Section - - - - - - - - - - - - - - - - -->
+
+				<div class="kw-newsletter-section">
+
+					<!-- - - - - - - - - - - - - - Background Icon - - - - - - - - - - - - - - - - -->
+
+					<i class="lnr icon-envelope kw-section-icon"></i>
+
+					<!-- - - - - - - - - - - - - - End of Background Icon - - - - - - - - - - - - - - - - -->
+
+					<div class="container">
+
+						<div class="kw-newsletter">
+
+							<h3 class="kw-title">Sign Up to Newsletter</h3>
+
+							
+
+							<!-- - - - - - - - - - - - - - Newsletter Form - - - - - - - - - - - - - - - - -->
+
+							<form class="kw-newsletter-form kw-inline-form" ng-controller="dashResultsController">
+								
+								<div class="kw-input-wrapper">
+
+									<input type="email" name="email1" autocomplete="off" ng-model="newsletter.subscribe" placeholder="Enter your email address...">
+
+								</div><!--/ .kw-input-wrapper -->
+
+								<button type="submit" class="kw-btn-big kw-yellow" ng-click="MailSub(newsletter)">Sign Up</button>
+
+							</form>
+
+							<!-- - - - - - - - - - - - - - End of Newsletter Form - - - - - - - - - - - - - - - - -->
+
+						</div><!--/ .kw-newsletter -->
+
+					</div><!--/ .container -->
+
+				</div>
+
+				<!-- - - - - - - - - - - - - - End of Newsletter Section - - - - - - - - - - - - - - - - -->
+
+				<div class="container">
+
+					<!-- - - - - - - - - - - - - - Footer Section - - - - - - - - - - - - - - - - -->
+
+					<div class="kw-fsection">
+
+						<div class="kw-footer-widget-area kw-cols-4">
+
+							<div class="col-md-3 col-xs-6">
+
+								<!-- - - - - - - - - - - - - - Widget - - - - - - - - - - - - - - - - -->
+
+								<div class="kw-widget">
+
+									<a href="/" class="kw-footer-logo"><img src="assets/img/NX-LOGO-300x66.png" alt="nxsearxh.com"></a>
+
+									
+
+									<ul class="kw-social-links">
+
+										<li><a href="https://www.facebook.com/nxsearch" target="_blank"><i class="fa fa-facebook"></i></a></li>
+										<li><a href=""><i class="fa fa-google-plus" target="_blank"></i></a></li>
+										<li><a href="https://twitter.com/nxsearch" target="_blank"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="https://www.instagram.com/nxsearch_com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+										<!--<li><a href="#"><i class="fa fa-envelope-o"></i></a></li>-->
+
+									</ul>
+
+								</div>
+
+								<!-- - - - - - - - - - - - - - End of Widget - - - - - - - - - - - - - - - - -->
+
+							</div><!--/ .kw-widget-col -->
+
+							<div class="col-md-3 col-xs-6">
+
+								<!-- - - - - - - - - - - - - - Widget - - - - - - - - - - - - - - - - -->
+
+								<section class="kw-widget">
+
+									<h4 class="kw-widget-title">Company</h4>
+
+									<ul>
+
+										<li><a href="/aboutus">About Us</a></li>										
+										<li><a href="/career">Careers</a></li>
+										<li><a href="contactus">Contact Us</a></li>
+
+									</ul>
+
+								</section>
+
+								<!-- - - - - - - - - - - - - - End of Widget - - - - - - - - - - - - - - - - -->
+
+							</div><!--/ .kw-widget-col -->
+
+                            <!--/ .kw-widget-col -->
+
+							<div class="col-md-3 col-xs-6">
+
+								<!-- - - - - - - - - - - - - - Widget - - - - - - - - - - - - - - - - -->
+
+								<section class="kw-widget">
+
+									<h4 class="kw-widget-title">Quick Links</h4>
+
+									<ul>
+
+										<li><a href="#">How It Works</a></li>
+										<li><a href="#">Add Listing</a></li>
+                                        <li><a href="#">Blog</a></li>
+
+									</ul>
+
+								</section>
+
+								<!-- - - - - - - - - - - - - - End of Widget - - - - - - - - - - - - - - - - -->
+
+							</div><!--/ .kw-widget-col -->
+
+							<div class="col-md-3 col-xs-6">
+
+								<!-- - - - - - - - - - - - - - Widget - - - - - - - - - - - - - - - - -->
+
+								<section class="kw-widget">
+
+									<h4 class="kw-widget-title">Terms</h4>
+
+									<ul>										
+										<li><a href="/termsandconditions">Terms & Conditions</a></li>
+										<li><a href="/privacypolicy">Privacy Policy</a></li>
+										<li><a href="/disclaimer">Disclaimer</a></li>
+
+									</ul>
+
+								</section>
+
+								<!-- - - - - - - - - - - - - - End of Widget - - - - - - - - - - - - - - - - -->
+
+							</div><!--/ .kw-widget-col -->
+
+						</div><!--/ .kw-footer-widget-area -->
+
+					</div>
+
+					<!-- - - - - - - - - - - - - - End of Footer Section - - - - - - - - - - - - - - - - -->
+
+				</div><!--/ .container -->
+
+				<!-- - - - - - - - - - - - - - Copyright Section - - - - - - - - - - - - - - - - -->
+
+				<div class="kw-copyright">
+
+					<div class="container">
+
+						<p>Copyright <a href="/">NXsearch</a> &copy; 2017. All Rights Reserved</p>
+
+					</div><!--/ .container -->
+						
+				</div>
+
+				<!-- - - - - - - - - - - - - - End of Copyright Section - - - - - - - - - - - - - - - - -->
+
+			</footer>
+
+			<!-- - - - - - - - - - - - - - End of Footer - - - - - - - - - - - - - - - - -->
+<!-- Footer End --> 
+
+<script>
+    var $div = $('.scrollable-menu');
+    $(document.body).click(function() {
+        if (!$div.has(this).length) { // if the click was not within $div
+            $div.hide();
+        }
+
+    });
+    $(".showdiv").focus(function() {
+        // if the click was not within $div
+        $div.show();
+
+
+    });
+</script>
+
+	<!--<script type="text/javascript">
+$(".toDiv").click(function() {
+    $('html,body').animate({
+        scrollTop: $(".tab-content").offset().top - 50},
+        'slow');
+});
+
+</script>-->
+

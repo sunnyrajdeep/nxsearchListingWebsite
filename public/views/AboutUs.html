@@ -1,0 +1,530 @@
+
+
+
+	<!--************************************
+			Wrapper Start					
+	*************************************-->
+	<div id="tg-wrapper" class="tg-wrapper tg-haslayout">
+<!-- Header -->
+				<header id="header" class="kw-header kw-dark">
+
+				<!-- - - - - - - - - - - - - - Header Top Bar - - - - - - - - - - - - - - - - -->
+
+				
+
+				<!-- - - - - - - - - - - - - - End of Header Top Bar - - - - - - - - - - - - - - - - -->
+
+				<!-- - - - - - - - - - - - - - Header Section - - - - - - - - - - - - - - - - -->
+
+				<div class="kw-hsection kw-sticky">
+
+					<div class="kw-sm-table-row row">
+
+						<div class="col-sm-2 col-md-2">
+
+							<!-- - - - - - - - - - - - - - Logo - - - - - - - - - - - - - - - - -->
+
+							<a href="/">
+
+								<img src="assets/img/NX-LOGO-300x66.png" alt="">
+
+							</a>
+
+							<!-- - - - - - - - - - - - - - End of Logo - - - - - - - - - - - - - - - - -->
+
+						</div>
+                        <!-- - - - - - - - - - - - - - sEARCH FORM- - - - - - - - - - - - - - - - -->
+                        <div class="col-md-7 col-xs-12 formbackground2" style="padding-top:10px;" ng-controller="InstantSearchController">
+                            <div class="col-md-12 col-xs-12">
+                                <form>
+                                    <div class="col-md-3 col-xs-12 nopadforsearch">
+
+                                        <select class="form-control" select2="" name="city" data-ng-model="client.selectedCityModel" ng-options="c.city as c.city for c in client.cities" ng-disabled="disabled">
+                                                                <option value=""><i class="fa fa-map-marker" aria-hidden="true"></i> Select City</option>
+                                                            </select>
+
+                                    </div>
+
+                                    <div class="col-md-3 col-xs-12 nopadforsearch">
+                                        <div>
+                                            <select class="form-control" select2="" name="city" data-ng-model="MainAreas.selectedAreaModel.Area" ng-options="c.Area as c.Area for c in MainAreas.areas | orderBy : 'Area' " ng-disabled="disabled">
+                                                                <option value="">Select Area</option>
+                                                            </select>
+                                            <!--{{MainAreas.selectedAreaModel}}-->
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="col-md-4 col-xs-12 nopadforsearch">
+                                        <div class="form-group" ng-blur="EnableData = false">
+                                            <input type="text" name="categoryselect" ng-value="selectedCategory | slug1" ng-keyup="loadClients()" class="formInput" id="exampleInputPassword2" ng-model="searchString" ng-change="callScriptThenServer(searchString)" ng-focus="EnableData= true" ng-click="loadDefaultCategories()" click-anywhere-but-here="EnableData=false" style="height: 50px;"/>
+
+                                            <div ng-show="EnableTextInputResult == false || EnableData" class="scrollable-menu" style="background-color:white; z-index: 2;border: 1px solid grey;position: absolute;padding-left:2px; width: 100%;height:900px;">
+                                                <div ng-repeat="i in Categories |  filter : searchString track by $index">
+                                                    <a href="" ng-click="gotoResultsPageByCategory(i)">
+                                                        <div class="list_dropdown">
+                                                            {{i}}
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div ng-repeat="i in SubCategories |  filter : searchString track by $index">
+                                                    <a href="" ng-click="gotoResultsPageBySubCategory(i)">
+                                                        <div class="list_dropdown">
+                                                            {{i}}
+                                                        </div>
+                                                    </a>
+
+
+                                                </div>
+
+                                                <div ng-repeat="i in clients |filter : {isPaidClient:true}  |  filter : searchString track by $index " ng-click="doSomething($event, 1)">
+                                                    <a href="/profile/{{i.City | slugify}}/{{i.Categories | slugifynolower}}/{{i.Area | slugify}}/{{i.ClinicName | slugify | slug}}/{{i._id}}">
+                                                        <div class="list_dropdown">
+                                                            <b> {{i.ClinicName}}</b>
+                                                            <br/>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                                <!--<div ng-repeat="i in clients |  filter : searchString | limitTo:5 track by $index " ng-click="doSomething($event, 1)">
+                                                    <a href="/profile/{{i.City | slugify}}/{{i.Categories | slugifynolower}}/{{i.Area | slugify}}/{{i.ClinicName | slugify | slug}}/{{i._id}}">
+                                                        <div class="list_dropdown">
+                                                            <span class="text-center;">{{i.DoctorName}}</span>
+                                                            <br/>
+                                                        </div>
+                                                    </a>
+                                                </div> -->
+                                            </div>
+
+                                        </div>
+                                        <span class="clearInput" ng-click="clearInput()">X</span>
+                                    </div>
+
+                                    <div class="col-md-2 col-xs-12 text-center nopadforsearch">
+                                        
+                                        
+
+										<button class="kw-btn-big kw-yellow" style="width:100%" type="submit">Search</button>
+
+									
+                                    </div>
+                                </form>
+                            </div>
+                        </div> 
+
+
+                        <!-- - - - - - - - - - - - - - End of SEARCH FORM - - - - - - - - - - - - - - - - -->
+
+						<div class="col-sm-10 col-xs-12 col-md-3">
+
+							<div class="kw-hcontent ">
+                                    
+
+								<!-- - - - - - - - - - - - - - End of Navigation - - - - - - - - - - - - - - - - -->
+
+								<!-- - - - - - - - - - - - - - Add Listing - - - - - - - - - - - - - - - - -->
+
+								<a href="/register" class="kw-btn-medium kw-yellow-type-2">Add Listing</a> 
+
+								<!-- - - - - - - - - - - - - - End of Add Listing - - - - - - - - - - - - - - - - -->
+
+							</div><!--/ .kw-hcontent -->
+
+						</div>
+
+					</div><!--/ .kw-sm-table-row.row -->
+
+				</div>
+
+				<!-- - - - - - - - - - - - - - End of Header Section - - - - - - - - - - - - - - - - -->
+
+		</header>
+<!-- Header End -->
+		<!--************************************
+				Home Banner Start				
+		*************************************-->
+		<div class="tg-pageinnerbanner tg-haslayout tg-parallaximg" data-appear-top-offset="600" data-parallax="scroll" data-image-src="images/banner/img-02.jpg">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-xs-12">
+						<div class="tg-pageheadcontent">
+							<div class="tg-pagetitle">
+								<h1>It Is Easy To Understand</h1>
+							</div>
+							<ol class="tg-breadcrumb">
+								<li><a href="#">Home</a></li>
+								<li class="tg-active">how It Works?</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--************************************
+				Home Banner End					
+		*************************************-->
+		<!--************************************
+				Main Start						
+		*************************************-->
+		<main id="tg-main" class="tg-main tg-haslayout tg-paddingzero">
+			<!--************************************
+					How It Works Start		
+			*************************************-->
+			<section class="tg-main-section tg-haslayout">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="tg-howitworksholder">
+								<div class="tg-howitsworktitle">
+									<h2>NX-Search Work Process</h2>
+									<h3>How It Works?</h3>
+								</div>
+								<div class="tg-howitworks">
+									<div class="col-sm-4 col-xs-6">
+										<div class="tg-howitworksbox">
+											<div class="tg-servicseeker">
+												<figure class="tg-servicseakerimg">
+													<img src="assets/img/icon-35.png" alt="image description">
+												</figure>
+												<h2>Service Seeker</h2>
+											</div>
+										</div>
+										<div class="tg-howitworksbox">
+											<div class="tg-arrow"><i class="fa fa-angle-down"></i></div>
+											<div class="tg-servicseeker tg-secureandfast">
+												<h2>Its Secure &amp; Fast</h2>
+												<h3>Its Free Now &amp; Ever</h3>
+											</div>
+										</div>
+										<div class="tg-howitworksbox">
+											<div class="tg-arrow"><i class="fa fa-angle-down"></i></div>
+											<div class="tg-servicseeker tg-easytosearch">
+												<h2>Easy To Search</h2>
+												<h3>Search Thausands Of Professionals</h3>
+											</div>
+										</div>
+										<div class="tg-howitworksbox">
+											<div class="tg-arrow"><i class="fa fa-angle-down"></i></div>
+											<div class="tg-servicseeker tg-choosebest">
+												<h2>Choose Best Professional</h2>
+												<h3>Enquire Professional</h3>
+											</div>
+										</div>
+										
+										<div class="tg-howitworksbox">
+											<div class="tg-arrow"><i class="fa fa-angle-down"></i></div>
+											<div class="tg-servicseeker tg-startserviceseeker">
+												<h2>Start As Service Seeker</h2>
+												
+												
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-4 hidden-xs">
+										<div class="tg-centericons">
+											<div class="tg-howitworksbox">
+												<div class="tg-servicseeker">
+													<figure class="tg-servicseakerimg">
+														<img src="assets/img/icon-37.png" alt="image description">
+													</figure>
+												</div>
+											</div>
+											<div class="tg-howitworksbox">
+												<div class="tg-servicseeker">
+													<figure class="tg-servicseakerimg">
+														<img src="assets/img/icon-38.png" alt="image description">
+													</figure>
+												</div>
+											</div>
+											<div class="tg-howitworksbox">
+												<div class="tg-servicseeker">
+													<figure class="tg-servicseakerimg">
+														<img src="assets/img/icon-39.png" alt="image description">
+													</figure>
+												</div>
+											</div>
+											<div class="tg-howitworksbox">
+												<div class="tg-servicseeker">
+													<figure class="tg-servicseakerimg">
+														<img src="assets/img/icon-40.png" alt="image description">
+													</figure>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-4 col-xs-6">
+										<div class="tg-howitworksbox">
+											<div class="tg-servicseeker">
+												<figure class="tg-servicseakerimg">
+													<img src="assets/img/icon-36.png" alt="image description">
+												</figure>
+												<h2>Service Provider</h2>
+											</div>
+										</div>
+										<div class="tg-howitworksbox">
+											<div class="tg-arrow"><i class="fa fa-angle-down"></i></div>
+											<div class="tg-servicseeker tg-secureandfast">
+												<h2>Its Secure &amp; Fast</h2>
+												<h3>Its Free Now &amp; Ever</h3>
+											</div>
+										</div>
+										<div class="tg-howitworksbox">
+											<div class="tg-arrow"><i class="fa fa-angle-down"></i></div>
+											<div class="tg-servicseeker tg-easytosearch">
+												<h2>Stay Active &amp; Alert</h2>
+												<h3>People Need You!</h3>
+											</div>
+										</div>
+										<div class="tg-howitworksbox">
+											<div class="tg-arrow"><i class="fa fa-angle-down"></i></div>
+											<div class="tg-servicseeker tg-choosebest">
+												<h2>Get Hired</h2>
+												<h3>Respond To Customer</h3>
+											</div>
+										</div>
+									
+										<div class="tg-howitworksbox">
+											<div class="tg-arrow"><i class="fa fa-angle-down"></i></div>
+											<div class="tg-servicseeker tg-startserviceseeker">
+												<h2>Start As Service Provider</h2>
+												<h3>Register Now</h3><br>
+												<a class="tg-btn" href="/register">Become A Member</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--************************************
+					How It Works End			
+			*************************************-->
+		</main>
+		<!--************************************
+				Main End
+		*************************************-->
+		<!--************************************
+				Footer Start
+		*************************************-->
+
+		<!--************************************
+				Footer End
+		*************************************-->
+	</div>
+	<!--************************************
+			Wrapper End
+	*************************************-->
+
+<!-- main container-->
+<div class="container" style="background-color:#fff;padding:50px">
+    <div class="col-md-12 well_new">
+        <div class="col-md-12 text-center">
+            <img itemprop="logo" src="/assets/img/NX-LOGO-300x66.png" alt="NX-Search"/>
+        </div>
+        <div class="col-md-12" style="text-align: justify; ">
+            <p>As we are moving ahead with the internet revolution in our country more and more people are using internet for their daily needs. It is very easy to search desired query/search on internet very fast. Modern life has become easier and the people of the world have to thanks to the immense contribution of the internet technology to communication and information sharing. There is no doubt that internet has made our life become easier and more convenient.<br/></p>
+
+<p>The objective of this project is to give our client more projection and enquiries through internet search for that purpose we are developing www.nxsearch.com as customize searching portal with online Appointment system for Health and Medicine category and Planner for other categories.<br/></p> 
+
+        </div>
+    </div>    
+
+</div>
+<!-- - - - - - - - - - - - - - Footer - - - - - - - - - - - - - - - - -->
+
+			<footer id="footer" class="kw-footer" data-bg="images/section_bg_01.png">
+
+				<!-- - - - - - - - - - - - - - Newsletter Section - - - - - - - - - - - - - - - - -->
+
+				<div class="kw-newsletter-section">
+
+					<!-- - - - - - - - - - - - - - Background Icon - - - - - - - - - - - - - - - - -->
+
+					<i class="lnr icon-envelope kw-section-icon"></i>
+
+					<!-- - - - - - - - - - - - - - End of Background Icon - - - - - - - - - - - - - - - - -->
+
+					<div class="container">
+
+						<div class="kw-newsletter">
+
+							<h3 class="kw-title">Sign Up to Newsletter</h3>
+
+							<p class="kw-description"></p>
+
+							<!-- - - - - - - - - - - - - - Newsletter Form - - - - - - - - - - - - - - - - -->
+
+							<form class="kw-newsletter-form kw-inline-form" method="POST">
+
+								<div class="kw-input-wrapper">
+
+									<input type="text" name="email" autocomplete="off" placeholder="Enter your email address...">
+
+								</div><!--/ .kw-input-wrapper -->
+
+								<button type="submit" class="kw-btn-big kw-yellow" name="newsletter_submit">Sign Up</button>
+
+							</form>
+
+							<!-- - - - - - - - - - - - - - End of Newsletter Form - - - - - - - - - - - - - - - - -->
+
+						</div><!--/ .kw-newsletter -->
+
+					</div><!--/ .container -->
+
+				</div>
+
+				<!-- - - - - - - - - - - - - - End of Newsletter Section - - - - - - - - - - - - - - - - -->
+
+				<div class="container">
+
+					<!-- - - - - - - - - - - - - - Footer Section - - - - - - - - - - - - - - - - -->
+
+					<div class="kw-fsection">
+
+						<div class="kw-footer-widget-area kw-cols-4">
+
+							<div class="col-md-3 col-xs-6">
+
+								<!-- - - - - - - - - - - - - - Widget - - - - - - - - - - - - - - - - -->
+
+								<div class="kw-widget">
+
+									<a href="/" class="kw-footer-logo"><img src="assets/img/NX-LOGO-300x66.png" alt="nxsearxh.com"></a>
+
+									
+
+									<ul class="kw-social-links">
+
+										<li><a href="https://www.facebook.com/nxsearch" target="_blank"><i class="fa fa-facebook"></i></a></li>
+										<li><a href=""><i class="fa fa-google-plus" target="_blank"></i></a></li>
+										<li><a href="https://twitter.com/nxsearch" target="_blank"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="https://www.instagram.com/nxsearch_com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+										<!--<li><a href="#"><i class="fa fa-envelope-o"></i></a></li>-->
+
+									</ul>
+
+								</div>
+
+								<!-- - - - - - - - - - - - - - End of Widget - - - - - - - - - - - - - - - - -->
+
+							</div><!--/ .kw-widget-col -->
+
+							<div class="col-md-3 col-xs-6">
+
+								<!-- - - - - - - - - - - - - - Widget - - - - - - - - - - - - - - - - -->
+
+								<section class="kw-widget">
+
+									<h4 class="kw-widget-title">Company</h4>
+
+									<ul>
+
+										<li><a href="/aboutus">About Us</a></li>										
+										<li><a href="/career">Careers</a></li>
+										<li><a href="contactus">Contact Us</a></li>
+
+									</ul>
+
+								</section>
+
+								<!-- - - - - - - - - - - - - - End of Widget - - - - - - - - - - - - - - - - -->
+
+							</div><!--/ .kw-widget-col -->
+
+                            <!--/ .kw-widget-col -->
+
+							<div class="col-md-3 col-xs-6">
+
+								<!-- - - - - - - - - - - - - - Widget - - - - - - - - - - - - - - - - -->
+
+								<section class="kw-widget">
+
+									<h4 class="kw-widget-title">Quick Links</h4>
+
+									<ul>
+
+										<li><a href="#">How It Works</a></li>
+										<li><a href="#">Add Listing</a></li>
+                                        <li><a href="#">Blog</a></li>
+
+									</ul>
+
+								</section>
+
+								<!-- - - - - - - - - - - - - - End of Widget - - - - - - - - - - - - - - - - -->
+
+							</div><!--/ .kw-widget-col -->
+
+							<div class="col-md-3 col-xs-6">
+
+								<!-- - - - - - - - - - - - - - Widget - - - - - - - - - - - - - - - - -->
+
+								<section class="kw-widget">
+
+									<h4 class="kw-widget-title">Terms</h4>
+
+									<ul>										
+										<li><a href="/termsandconditions">Terms & Conditions</a></li>
+										<li><a href="/privacypolicy">Privacy Policy</a></li>
+										<li><a href="/disclaimer">Disclaimer</a></li>
+
+									</ul>
+
+								</section>
+
+								<!-- - - - - - - - - - - - - - End of Widget - - - - - - - - - - - - - - - - -->
+
+							</div><!--/ .kw-widget-col -->
+
+						</div><!--/ .kw-footer-widget-area -->
+
+					</div>
+
+					<!-- - - - - - - - - - - - - - End of Footer Section - - - - - - - - - - - - - - - - -->
+
+				</div><!--/ .container -->
+
+				<!-- - - - - - - - - - - - - - Copyright Section - - - - - - - - - - - - - - - - -->
+
+				<div class="kw-copyright">
+
+					<div class="container">
+
+						<p>Copyright <a href="/">NXsearch</a> &copy; 2017. All Rights Reserved</p>
+
+					</div><!--/ .container -->
+
+				</div>
+
+				<!-- - - - - - - - - - - - - - End of Copyright Section - - - - - - - - - - - - - - - - -->
+
+			</footer>
+
+			<!-- - - - - - - - - - - - - - End of Footer - - - - - - - - - - - - - - - - -->
+<!-- Footer End --> 
+    <script>
+        var $div = $('.scrollable-menu');
+        $(document.body).click(function() {
+            if (!$div.has(this).length) { // if the click was not within $div
+                $div.hide();
+            }
+
+        });
+        $("#exampleInputPassword2").click(function() {
+            // if the click was not within $div
+            $div.show();
+
+
+        });
+    </script>
+
+    <script type="text/javascript">
+    mixpanel.track_links("#enquiryButton button", "click Enquiry Button", {
+        "referrer": document.referrer
+    });
+</script>
+  

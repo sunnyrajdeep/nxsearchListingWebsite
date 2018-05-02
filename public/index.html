@@ -1,0 +1,437 @@
+﻿<!DOCTYPE html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html lang="en-US" xmlns:og="http://ogp.me/ns#" ng-app="ClinicApp" id="ng-app" ng-controller="InstantSearchController">
+
+<head>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-64739177-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+            <!-- Google Tag Manager -->
+            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                    })(window,document,'script','dataLayer','GTM-THFH9NL');</script>
+                    <!-- Google Tag Manager -->
+
+
+
+                    <!-- start Mixpanel --><script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+                    0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+                    for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+                    mixpanel.init("6743eb8661397afd5a682a2330a01c38");
+            </script><!-- end Mixpanel -->
+
+            <!-- Hotjar Tracking Code for www.nxsearch.com -->
+        <script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:501489,hjsv:5};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+        </script>
+
+    <!-- META -->
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="fragment" content="!">
+    <meta name="google-site-verification" content="Hn1ybtufUg4QiGD_ZRDyBc5468PuSMoiHgM8Ijn2D2k" />
+   
+    <!-- Optimize mobile viewport -->
+    <base href="/" />
+    <title> Find Doctors in Pune, Dentist in Pune, Preschools in Pune, Diagnostic Labs in Pune, Spas &amp; Salons in Pune | NX-search</title>
+    <meta name="title" content="Find Doctors in Pune, Dentist in Pune, Preschools in Pune, Diagnostic Labs in Pune, Spas &amp; Salons in Pune | NX-search">
+    <meta name="description" content="Find Doctors in Pune, Dentist in Pune, Preschools in Pune, Diagnostic Labs in Pune, Spas &amp; Salons in Pune | NX-search">
+    <meta name="keywords" content="Find Doctors in Pune, Dentist in Pune, Preschools in Pune, Diagnostic Labs in Pune, Spas &amp; Salons in Pune | NX-search">
+
+    <!-- Twitter Card data -->
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="{{currentPath}}">
+
+    <!-- <meta name="twitter:site" content="">-->
+    <meta name="twitter:title" content="Find Doctors in Pune, Dentist in Pune, Preschools in Pune, Diagnostic Labs in Pune, Spas &amp; Salons in Pune | NX-search">
+    <meta name="twitter:description" content="Find Doctors in Pune, Dentist in Pune, Preschools in Pune, Diagnostic Labs in Pune, Spas &amp; Salons in Pune | NX-search">
+    <meta name="twitter:image" content="assets/img/nxsearchlogo.jpg">
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Find Doctors in Pune, Dentist in Pune, Preschools in Pune, Diagnostic Labs in Pune, Spas &amp; Salons in Pune | NX-search" />
+    <meta property="og:description" content="Find Doctors in Pune, Dentist in Pune, Preschools in Pune, Diagnostic Labs in Pune, Spas &amp; Salons in Pune | NX-search" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{currentPath}}" />
+    <meta property="og:site_name" content="NXsearch" />
+    <meta property="og:image" content="assets/img/nxsearchlogo.jpg">
+    <meta type="hidden" property="fb:app_id" content="{1013740418769636}" />
+    <link rel="canonical" href="{{currentPath}}" />
+    <link rel="alternate" href="/" hreflang="en-US" />
+    <!-- SCROLLS -->
+
+    <script src="assets/js/jquery-3.1.0.min.js"></script>
+    <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="assets/css/packages.css">-->
+<!-- css -->
+
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+      <!--<link rel="stylesheet" href="assets/css/bootstrap-timepicker.min.css">
+      <link rel="stylesheet" href="assets/css/color.css">-->
+      <link rel="stylesheet" href="assets/css/customScrollbar.css">
+     <!-- <link rel="stylesheet" href="assets/css/fullcalendar.min.css">
+      <link rel="stylesheet" href="assets/css/css/jquery.countdown.css">
+      <link rel="stylesheet" href="assets/css/css/jquery-ui.css">-->
+      <link rel="stylesheet" href="assets/css/main.css">
+      <link rel="stylesheet" href="assets/css/responsive.css">
+ 
+<!-- css -->
+
+    <!-- New CSS -->
+    
+     <link rel="stylesheet" href="assets/css/new-css/animate.css">
+        
+      <link rel="stylesheet" href="assets/plugins/arcticmodal/jquery.arcticmodal-0.3.css">
+      <link rel="stylesheet" href="assets/plugins/owl-carousel/assets/owl.carousel.min.css">
+       <link rel="stylesheet" href="assets/css/style.css">
+    <!-- New CSS End -->
+        <link rel="stylesheet" href="assets/css/select2.min.css">
+        <link rel="stylesheet" href="assets/css/dist/angular-page-loader.css"> 
+    <link rel="icon" href="assets/img/favicon.ico">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Heebo:400,500,300,700,800,900' rel='stylesheet' type='text/css'>
+    <!--<script>
+        document.write('<base href="' + document.location + '" />');
+    </script>-->
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '1013740418769636',
+                xfbml: true,
+                version: 'v2.8'
+            });
+            FB.AppEvents.logPageView();
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
+
+    <style>
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+ }
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.hide-loader{
+display:none;
+}
+
+        
+        #gmaps {
+            /*width: 821px;*/
+            height: 250px;
+        }
+        
+        .bar {
+            background-color: #5c9bb7;
+            /*background-image:-webkit-linear-gradient(top, #5c9bb7, #5392ad);
+	background-image:-moz-linear-gradient(top, #5c9bb7, #5392ad);
+	background-image:linear-gradient(top, #5c9bb7, #5392ad);*/
+            box-shadow: 0 1px 1px #ccc;
+            border-radius: 2px;
+            /*width: 400px;*/
+            /*padding: 14px;*/
+            /*margin: 80px auto 20px;*/
+            position: relative;
+        }
+        /* enable absolute positioning */
+        
+        .inner-addon {
+            position: relative;
+        }
+        /* style glyph */
+        
+        .inner-addon .glyphicon {
+            position: absolute;
+            padding: 10px;
+        }
+        /* align glyph */
+        
+        .left-addon .glyphicon {
+            left: 0px;
+        }
+        
+        .right-addon .glyphicon {
+            right: 0px;
+        }
+        /* add padding  */
+        
+        .left-addon input {
+            padding-left: 30px;
+        }
+        
+        .right-addon input {
+            padding-right: 30px;
+        }
+        
+        .bar input {
+            background: #fff no-repeat 13px 13px;
+            border: none;
+            width: 100%;
+            /*line-height: 19px;*/
+            padding: 11px 0;
+            border-radius: 2px;
+            box-shadow: 0 2px 8px #c4c4c4 inset;
+            text-align: left;
+            font-size: 14px;
+            font-family: inherit;
+            color: #738289;
+            font-weight: bold;
+            outline: none;
+            text-indent: 40px;
+        }
+        
+        .bootstrap-timepicker-widget.dropdown-menu {
+            z-index: 1050!important;
+        }
+        
+        @media (max-width: 768px) {
+            html,
+            body {
+                width: auto !important;
+                overflow-x: hidden !important;
+            }
+            #myModal .modal-dialog {
+                width: 100%;
+            }
+        }
+        .active11 {
+    background-color: #FFF;
+    color: #000;
+}
+    </style>
+    <style>
+            /* Always set the map height explicitly to define the size of the div
+             * element that contains the map. */
+            #map {
+              height: 100%;
+            }
+            /* Optional: Makes the sample page fill the window. */
+            html, body {
+              height: 100%;
+              margin: 0;
+              padding: 0;
+            }
+            #floating-panel {
+              position: absolute;
+              top: 10px;
+              left: 25%;
+              z-index: 5;
+              background-color: #fff;
+              padding: 5px;
+              border: 1px solid #999;
+              text-align: center;
+              font-family: 'Roboto','sans-serif';
+              line-height: 30px;
+              padding-left: 10px;
+            }
+          </style>
+
+<!-- Start of HubSpot Embed Code -->
+ <!-- <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/3289571.js"></script>-->
+<!-- End of HubSpot Embed Code -->
+    <!--<div class="pulse" style="width:150px;">Hello world!</div>
+<script>
+    var elem = document.querySelector('.pulse');
+    var animation = elem.animate([
+        {opacity: 0.5, transform: "scale(0.5)"},
+        {opacity: 1.0, transform: "scale(1)"}
+    ], {
+        direction: 'alternate',
+        duration: 500,
+        iterations: Infinity
+    });
+</script> -->
+
+    <!--<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>-->
+
+</head>
+<!-- SET THE CONTROLLER AND GET ALL TODOS WITH INITIALIZE ng-hide="currentPath == 'http://localhost:5000/'" FUNCTION -->
+
+<body ng-cloak="">
+        <script type="text/javascript">
+    mixpanel.track_links("#enquiryButton button", "click Enquiry Button", {
+        "referrer": document.referrer
+    });
+</script>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THFH9NL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <!--<page-loader latency="1000">
+        <div class="loader"></div>
+    </page-loader>-->
+    <!--[if gte IE 8]>   <h1>IE</h1> <img src="/index.jpg"> <![endif]-->
+
+    <div loading-indicator class="waiting-box text-center"><div class="loader text-center" id="loader">
+</div></div>
+     <!--[if gte IE 8]>
+<script>
+  
+</script>
+<div style="align:center; padding-left: 400px;">
+<img src="index.jpg" alt="nxsearch">
+</div>
+<![endif]-->
+
+    <!--<script type="text/javascript"> // <![CDATA[
+	if ( (navigator.userAgent.indexOf('Android') != -1) ) {
+		document.location = "/register";
+	} // ]]>
+</script>
+
+    <div class="chatbox" id="chatbox" ng-hide="$location.path() == '/form'" class="ng-cloak">
+<span class="chat-text">How Can I Help You ?</span>
+<script>
+//<![CDATA[
+document.write('<div id="smartchatbox_img901621879" style="width: 280px; height: 250px; overflow: hidden; margin: auto; padding: 0;">');
+document.write('<div id="smartchatbox901621879" style="width: 280px; height: 250px; overflow: hidden; margin: auto; padding: 0; border:0; ">');
+document.write('<iframe src="/form" scrolling="no" frameborder="0" width="280px" height="450px" style="border:0; margin:0; padding: 0;">');
+document.write('</iframe></div></div>');
+//]]>
+</script>
+<!--<div id="close-chat" onclick="closeChatbox()">&times;</div>
+<div id="minim-chat" onclick="minimChatbox()"><span class="minim-button">&minus;</span></div>
+<div id="maxi-chat" onclick="loadChatbox()"><span class="maxi-button">&plus;</span></div>
+</div>
+
+<script>
+//<![CDATA[
+function loadChatbox(){var e=document.getElementById("minim-chat");e.style.display="block";var e=document.getElementById("maxi-chat");e.style.display="none";var e=document.getElementById("chatbox");e.style.margin="0";}
+function closeChatbox(){var e=document.getElementById("chatbox");e.style.margin="0 0 -1500px 0";}
+function minimChatbox(){var e=document.getElementById("minim-chat");e.style.display="none";var e=document.getElementById("maxi-chat");e.style.display="block";var e=document.getElementById("chatbox");e.style.margin="0 0 -260px 0";}
+//]]>
+</script>  -->
+
+    <div autoscroll="true" class="kw-wide-layout-type" ng-view>
+
+    </div>
+
+
+
+
+ <!-- SPELLS  
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script> jqLite.js
+        <script src="assets/js/jquery-3.1.0.min.js"></script>-->
+      <!--  JS -->
+
+
+ <!--<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+        JS -->
+
+            <!--  JS 
+            <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>-->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular-route.min.js"></script>
+        <script src="assets/js/select2.min.js"></script>
+        <script type="text/javascript" src="assets/js/ng-file-upload.min.js"></script>
+        <script type="text/javascript" src="assets/js/ng-file-upload-shim.min.js"></script>
+        <script type="text/javascript" src="assets/js/dirPagination.js"></script>
+        <script src="assets/js/ui-bootstrap-tpls-0.11.0.js"></script>
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.3.1/ui-bootstrap.min.js"></script>-->
+        
+        <script src="assets/js/uibootstrap.min.js"></script>
+       
+        <script src="assets/js/angular-animate.min.js"></script>
+        <script src="assets/js/angular-touch.min.js"></script>
+        <script src="assets/js/angular-cookies.min.js"></script>
+        <script src="assets/js/checklist-model.js"></script>
+        <script src="assets/js/angular-linq.min.js"></script>
+
+        <script type="text/javascript" src="app.js"></script>
+         <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/nxsearch.core.js"></script> 
+        <script src="assets/js/jquery.easing.1.3.min.js"></script> 
+
+        <script src="assets/js/angular-sanitize.min.js"></script>
+        <script src="assets/js/readmore.min.js"></script>
+         <script src="assets/js/FileSaver.min.js"></script>
+        <!-- <script src="assets/css/jquery-1.10.2.min.js"></script>
+
+        <script src="assets/js/login.js"></script>-->
+        <script src="controllers/homeController.js"></script>
+        <script src="controllers/dashResultsController.js"></script>
+        <script src="controllers/citiesController.js"></script>
+
+        <script src="controllers/categoriesController.js"></script>
+
+        <script src="controllers/loginController.js"></script>
+        <script src="controllers/updateHomeServicesGalleryAllController.js"></script>
+ <!--       <script type="text/javascript" src="assets/js/ng-text-truncate.js"></script>-->
+        <!--<script src="https://rawgit.com/srfrnk/re-tree/master/re-tree.js" type="text/javascript"></script>-->
+       <!-- <script src="https://rawgit.com/srfrnk/ng-device-detector/master/ng-device-detector.js" type="text/javascript"></script>-->
+        <!--<script src="//cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>-->
+           
+        <script type="text/javascript" src="assets/js/angular-page-loader.min.js"></script>
+        
+        <script data-require="lodash-underscore@*" data-semver="2.4.1" src="https://rawgit.com/lodash/lodash/2.4.1/dist/lodash.underscore.min.js"></script>
+        <script data-require="angular-google-maps@*" src="https://rawgit.com/angular-ui/angular-google-maps/master/dist/angular-google-maps.min.js"></script>
+        <script>
+
+        var $div = $('.scrollable-menu');
+        $(document.body).click(function() {
+            if (!$div.has(this).length) { // if the click was not within $div
+                $div.hide();
+            }
+
+        });
+        $(".showdiv").click(function() {
+            // if the click was not within $div
+            $div.show();
+
+        });
+ 
+    </script>
+</body>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQhbsIozl3rAQIDhwlsuQ_ZB5P-cZHMxs"></script>
+
+</html>

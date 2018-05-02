@@ -1,0 +1,312 @@
+
+ <script src='https://www.google.com/recaptcha/api.js'></script>
+ <!-- Header -->
+<!-- Header -->
+				<header id="header" class="kw-header kw-dark">
+
+				<!-- - - - - - - - - - - - - - Header Top Bar - - - - - - - - - - - - - - - - -->
+
+				
+
+				<!-- - - - - - - - - - - - - - End of Header Top Bar - - - - - - - - - - - - - - - - -->
+
+				<!-- - - - - - - - - - - - - - Header Section - - - - - - - - - - - - - - - - -->
+
+				<div class="kw-hsection kw-sticky">
+
+					<div class="row">
+
+						<div class="col-sm-12 col-md-2 text-center">
+
+							<!-- - - - - - - - - - - - - - Logo - - - - - - - - - - - - - - - - -->
+
+							<a href="/">
+
+								<img src="assets/img/NX-LOGO-300x66.png" alt="">
+
+							</a>
+
+							<!-- - - - - - - - - - - - - - End of Logo - - - - - - - - - - - - - - - - -->
+
+						</div>
+                      <div class="col-sm-12 col-xs-12 col-md-9"></div>
+
+
+                        <!-- - - - - - - - - - - - - - End of SEARCH FORM - - - - - - - - - - - - - - - - -->
+
+						<div class="col-sm-12 col-xs-12 col-md-3">
+
+							<div class="kw-hcontent text-center">
+                                    
+
+								<!-- - - - - - - - - - - - - - End of Navigation - - - - - - - - - - - - - - - - -->
+
+								<!-- - - - - - - - - - - - - - Add Listing - - - - - - - - - - - - - - - - -->
+
+								<a href="/register" class="kw-btn-medium kw-yellow-type-2">Add Listing</a> 
+
+								<!-- - - - - - - - - - - - - - End of Add Listing - - - - - - - - - - - - - - - - -->
+
+							</div><!--/ .kw-hcontent -->
+
+						</div>
+
+					</div><!--/ .kw-sm-table-row.row -->
+
+				</div>
+
+				<!-- - - - - - - - - - - - - - End of Header Section - - - - - - - - - - - - - - - - -->
+
+		</header>
+<!-- Header End -->
+<!-- Header End text-align: justify; -->
+<div class="container" style="background-color:#fff;padding:50px">
+    
+           <div class="col-md-12 col-xs-12" style="background-color: gray" >
+               <div class="col-md-6 col-md-offset-3" >
+        
+                    <form class="form-horizontal" name="careerForm" method="post" style="padding-top: 20px; ">
+                        
+                            <h2 class="text-center header text1">Upload Your Profile</h2>
+                            <input type="hidden"  ng-model="formData._id">
+                            <div class="form-group">
+                               <div class="col-md-2 col-xs-12"> <label class="text1" style="padding-top: 5px;">Name :</label></div>
+                                <div class="col-md-10 col-xs-12">
+                                    <input id="name" name="name" type="text" placeholder="Enter Name Here" ng-model="formData.clientName" class="form-control" ng-required="true">
+                                     <div ng-show="careerForm.name.$touched && careerForm.name.$invalid">
+                                         <small style="color: red; display: block; text-align: center">Please Enter Name</small>
+                                     </div>
+                                </div>
+                            </div>
+
+                          
+                     <div class="col-md-12">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <div class="col-md-4 col-xs-12"> <label class="text1" style="padding-top: 5px;">Email Id :</label></div>
+                                <div class="col-md-8 col-xs-12">
+                                    <input id="email" name="email" type="email" placeholder="Email Address" ng-model="formData.email" class="form-control" ng-required="true">
+                                     <div ng-show="careerForm.email.$touched && careerForm.email.$invalid">
+                                         <small style="color: red; display: block; text-align: center">Please Enter Valid email</small>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <div class="col-md-5 col-xs-12"> <label class="text1 pull-right" style="padding-top: 5px;">Mobile No. :</label></div>
+                                <div class="col-md-7 col-xs-12">
+                                    <input id="phone" name="phone" type="text" placeholder="Mobile" ng-model="formData.phone" class="form-control" ng-required="true">
+                                     <div ng-show="careerForm.phone.$touched && careerForm.phone.$invalid">
+                                         <small style="color: red; display: block; text-align: center">Please Enter Valid Mobile No.</small>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                            <div class="form-group">
+                                 <div class="col-md-2 col-xs-12"> <label class="text1" style="padding-top: 5px;">Address :</label></div>
+                                <div class="col-md-10 col-xs-12">
+                                    <textarea class="form-control" id="message" name="message" ng-model="formData.address" placeholder="Enter your Address for us here." rows="3" ng-required="true"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                               <div class="col-md-2 col-xs-12"> <label class="text1" style="padding-top: 5px;">Upload Resume :</label></div>
+                                <div class="col-md-10 col-xs-12">
+                                    <input id="name" name="name" type="file" ng-model="formData.file" class="form-control" ng-required="true">
+                                     <div ng-show="careerForm.Businessname.$touched && careerForm.Businessname.$invalid">
+                                         <small style="color: red; display: block; text-align: center">Please upload Resume</small>
+                                     </div>
+                                </div>
+                            </div>
+                            
+                             <div  id="recaptcha" ng-required="true">
+                                <div class="g-recaptcha center-block" data-sitekey="6LfxPhMUAAAAAMGDdjN1FQ4eCY_fRL3ejKXAu5dj" style="text-align: center" ></div>
+                             </div><br/>
+                            <div class="form-group">
+                                <div class="col-md-12 text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg" ng-disabled="careerForm.$invalid">Send</button>
+                                </div>
+                            </div>
+                        
+                    </form>
+               </div>
+        </div>
+
+</div>
+<!-- Footer -->
+<!-- - - - - - - - - - - - - - Footer - - - - - - - - - - - - - - - - -->
+
+			<footer id="footer" class="kw-footer" data-bg="images/section_bg_01.png">
+
+				<!-- - - - - - - - - - - - - - Newsletter Section - - - - - - - - - - - - - - - - -->
+
+				<div class="kw-newsletter-section">
+
+					<!-- - - - - - - - - - - - - - Background Icon - - - - - - - - - - - - - - - - -->
+
+					<i class="lnr icon-envelope kw-section-icon"></i>
+
+					<!-- - - - - - - - - - - - - - End of Background Icon - - - - - - - - - - - - - - - - -->
+
+					<div class="container">
+
+						<div class="kw-newsletter">
+
+							<h3 class="kw-title">Sign Up to Newsletter</h3>
+
+							
+
+							<!-- - - - - - - - - - - - - - Newsletter Form - - - - - - - - - - - - - - - - -->
+
+							<form class="kw-newsletter-form kw-inline-form" method="POST">
+
+								<div class="kw-input-wrapper">
+
+									<input type="text" name="email" autocomplete="off" placeholder="Enter your email address...">
+
+								</div><!--/ .kw-input-wrapper -->
+
+								<button type="submit" class="kw-btn-big kw-yellow" name="newsletter_submit">Sign Up</button>
+
+							</form>
+
+							<!-- - - - - - - - - - - - - - End of Newsletter Form - - - - - - - - - - - - - - - - -->
+
+						</div><!--/ .kw-newsletter -->
+
+					</div><!--/ .container -->
+
+				</div>
+
+				<!-- - - - - - - - - - - - - - End of Newsletter Section - - - - - - - - - - - - - - - - -->
+
+				<div class="container">
+
+					<!-- - - - - - - - - - - - - - Footer Section - - - - - - - - - - - - - - - - -->
+
+					<div class="kw-fsection">
+
+						<div class="kw-footer-widget-area kw-cols-4">
+
+							<div class="col-md-3 col-xs-6">
+
+								<!-- - - - - - - - - - - - - - Widget - - - - - - - - - - - - - - - - -->
+
+								<div class="kw-widget">
+
+									<a href="/" class="kw-footer-logo"><img src="assets/img/NX-LOGO-300x66.png" alt="nxsearxh.com"></a>
+
+									
+
+									<ul class="kw-social-links">
+
+										<li><a href="https://www.facebook.com/nxsearch" target="_blank"><i class="fa fa-facebook"></i></a></li>
+										<li><a href=""><i class="fa fa-google-plus" target="_blank"></i></a></li>
+										<li><a href="https://twitter.com/nxsearch" target="_blank"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="https://www.instagram.com/nxsearch_com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+										<!--<li><a href="#"><i class="fa fa-envelope-o"></i></a></li>-->
+
+									</ul>
+
+								</div>
+
+								<!-- - - - - - - - - - - - - - End of Widget - - - - - - - - - - - - - - - - -->
+
+							</div><!--/ .kw-widget-col -->
+
+							<div class="col-md-3 col-xs-6">
+
+								<!-- - - - - - - - - - - - - - Widget - - - - - - - - - - - - - - - - -->
+
+								<section class="kw-widget">
+
+									<h4 class="kw-widget-title">Company</h4>
+
+									<ul>
+
+										<li><a href="/aboutus">About Us</a></li>										
+										<li><a href="/career">Careers</a></li>
+										<li><a href="contactus">Contact Us</a></li>
+
+									</ul>
+
+								</section>
+
+								<!-- - - - - - - - - - - - - - End of Widget - - - - - - - - - - - - - - - - -->
+
+							</div><!--/ .kw-widget-col -->
+
+                            <!--/ .kw-widget-col -->
+
+							<div class="col-md-3 col-xs-6">
+
+								<!-- - - - - - - - - - - - - - Widget - - - - - - - - - - - - - - - - -->
+
+								<section class="kw-widget">
+
+									<h4 class="kw-widget-title">Quick Links</h4>
+
+									<ul>
+
+										<li><a href="#">How It Works</a></li>
+										<li><a href="#">Add Listing</a></li>
+                                        <li><a href="#">Blog</a></li>
+
+									</ul>
+
+								</section>
+
+								<!-- - - - - - - - - - - - - - End of Widget - - - - - - - - - - - - - - - - -->
+
+							</div><!--/ .kw-widget-col -->
+
+							<div class="col-md-3 col-xs-6">
+
+								<!-- - - - - - - - - - - - - - Widget - - - - - - - - - - - - - - - - -->
+
+								<section class="kw-widget">
+
+									<h4 class="kw-widget-title">Terms</h4>
+
+									<ul>										
+										<li><a href="/termsandconditions">Terms & Conditions</a></li>
+										<li><a href="/privacypolicy">Privacy Policy</a></li>
+										<li><a href="/disclaimer">Disclaimer</a></li>
+
+									</ul>
+
+								</section>
+
+								<!-- - - - - - - - - - - - - - End of Widget - - - - - - - - - - - - - - - - -->
+
+							</div><!--/ .kw-widget-col -->
+
+						</div><!--/ .kw-footer-widget-area -->
+
+					</div>
+
+					<!-- - - - - - - - - - - - - - End of Footer Section - - - - - - - - - - - - - - - - -->
+
+				</div><!--/ .container -->
+
+				<!-- - - - - - - - - - - - - - Copyright Section - - - - - - - - - - - - - - - - -->
+
+				<div class="kw-copyright">
+
+					<div class="container">
+
+						<p>Copyright <a href="/">NXsearch</a> &copy; 2017. All Rights Reserved</p>
+
+					</div><!--/ .container -->
+
+				</div>
+
+				<!-- - - - - - - - - - - - - - End of Copyright Section - - - - - - - - - - - - - - - - -->
+
+			</footer>
+
+			<!-- - - - - - - - - - - - - - End of Footer - - - - - - - - - - - - - - - - -->
+<!-- Footer End --> 
