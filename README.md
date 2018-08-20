@@ -1,6 +1,6 @@
 
 
-A Node app built with MongoDB and AngularJS 1.59. 
+A Node app built with MongoDB and AngularJS 1.5.9. 
 
 Node provides the RESTful API. Angular provides the frontend and accesses the API. MongoDB stores like a hoarder.
 
